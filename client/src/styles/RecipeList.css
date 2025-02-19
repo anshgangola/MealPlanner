@@ -1,0 +1,118 @@
+.container {
+  background: #e9ecefbe;
+}
+/* Search Container */
+.search-container {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.search-container select,
+.search-container input {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.search-container button {
+  background-color: #28a745;
+  color: white;
+  padding: 8px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background 0.3s;
+}
+
+.search-container button:hover {
+  background-color: #218838;
+}
+
+/* 🔹 New: Reset Button */
+.reset-btn {
+  background-color: #dc3545;
+}
+
+.reset-btn:hover {
+  background-color: #c82333;
+}
+
+/* 🔹 New: Recipe Grid */
+/* 🔹 Recipe Grid: Display in Rows with Max 4 Tiles Per Row */
+.recipe-grid {
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(220px, 1fr)
+  ); /* Increased min-width */
+  gap: 30px; /* 🔹 Increased gap between tiles */
+  justify-content: center;
+  margin-top: 20px;
+  max-width: 1100px; /* 🔹 Increased max-width for better spacing */
+  margin-left: auto;
+  margin-right: auto;
+  padding: 20px; /* 🔹 Added padding around the grid */
+}
+
+/* 🔹 Tile Sizing and Layout */
+.recipe-tile {
+  background: white;
+  border-radius: 10px;
+  padding: 20px; /* 🔹 Increased padding inside each tile */
+  text-align: center;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+  width: 100%;
+  margin: 10px; /* 🔹 Added margin between tiles */
+}
+
+/* 🔹 Ensuring a Max of 4 Tiles Per Row */
+@media (min-width: 800px) {
+  .recipe-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media (max-width: 799px) and (min-width: 500px) {
+  .recipe-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 499px) {
+  .recipe-grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+/* 🔹 Tile Hover Effect */
+.recipe-tile:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* 🔹 Tile Title */
+.recipe-tile h3 {
+  font-size: 18px;
+  margin-bottom: 15px; /* 🔹 Increased spacing below the title */
+  color: #333;
+}
+
+/* 🔹 Recipe Text */
+.recipe-tile p {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 10px; /* 🔹 Increased spacing between text elements */
+}
+
+/* 🔹 Delete Button */
+.delete-btn {
+  background: none;
+  border: none;
+  color: red;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 15px; /* 🔹 Increased space above delete button */
+}

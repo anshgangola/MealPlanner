@@ -1,0 +1,46 @@
+/* Navbar */
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background-color: #adb5bd;
+  display: flex;
+  padding: 10px 20px;
+  box-shadow: 0px 4px 2px -2px gray;
+  justify-content: space-between;
+  align-items: center;
+  height: 80px;
+  width: 100%;
+  margin: 0; /* 🔹 Updated: Remove extra margin at the top */
+}
+
+/* Remove margin between navbar and form */
+.container {
+  margin-top: 0; /* 🔹 Updated: Ensure there's no margin at the top */
+  padding-top: 0; /* 🔹 Ensure there's no extra padding */
+}
+
+.navbar-right {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-title {
+  font-size: 28px;
+  color: rgb(21, 19, 19);
+  font-weight: bold;
+}
+
+.navbar-link {
+  color: rgb(21, 19, 19);
+  text-decoration: none;
+  margin-right: 20px;
+  font-size: 16px;
+  padding: 10px 15px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.navbar-link:hover {
+  color: #fff;
+}
